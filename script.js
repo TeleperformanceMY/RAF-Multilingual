@@ -10,6 +10,7 @@ function translate(language) {
             locationLabel: "Location:",
             jobLabel: "Job:",
             nextButton: "Next",
+            HowtoButton: "How To!",
             thankYou: "Thank you for your referral!",
             referralMessage1: "As we grow into Malaysia, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.",
             shareWhatsApp: "Share via WhatsApp",
@@ -119,6 +120,8 @@ function updatePageContent(language) {
     document.querySelectorAll("#step1 h3")[1].textContent = translations.locationLabel;
     document.querySelectorAll("#step1 h3")[2].textContent = translations.jobLabel;
     document.querySelector("#step1 button").textContent = translations.nextButton;
+    document.querySelector("#step1 button1").textContent = translations.HowtoButton;
+
 
     document.querySelector("#step2 h2").textContent = translations.thankYou;
     document.querySelector("#step2 p:nth-of-type(1)").textContent = translations.referralMessage1;
