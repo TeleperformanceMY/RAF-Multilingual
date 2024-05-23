@@ -1,3 +1,5 @@
+ 
+
 body 
 
 {
@@ -166,3 +168,24 @@ button:hover {
 }
  
 
+#go-back, #how-to {
+    margin-top: 20px;
+}
+ 
+#refresh {
+    position: flex;
+ 
+    top: 20px; /* Adjust the distance from the top of the page */
+    left: 20px; /* Adjust the distance from the left of the page */
+ 
+}
+#refresh.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+ 
+
+ 
