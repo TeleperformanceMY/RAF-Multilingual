@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Pop-up Page - Step 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +23,9 @@
             <div class="additional-logo">
                 <img src="TPLogo11.png" alt="Additional Logo">
             </div>
-            
+            <div id="how-to">
+                <a href="HowtoVid.html" target="_blank"><button>How To</button></a>
+            </div>
     <div class="language-selection">
         <label for="emp-lang-select">Choose Your Language:</label>
         <select id="emp-lang-select">
@@ -67,6 +73,12 @@
     <div class="popup-content" id="step2" style="display: none;">
         <div class="additional-logo">
             <img src="TPLogo11.png" alt="Additional Logo">
+        </div>
+        
+        <div id="refresh">
+            <button onclick="refreshPage()">
+                <span class="material-icons">arrow_back</span>
+            </button>
         </div>
         <h2>Thank you for your referral!</h2>
         <p>As we grow into Malaysia, become #MoreTogether as we #ElevateAsia, here are the links your friend can use so this is tagged to your profile into our Recruiting System.</p>
