@@ -130,7 +130,7 @@ function updatePageContent(language) {
 
     // Update options in select elements
     updateLanguageSelectOptions();
-    updateJobTitles(language);
+    
 }
 
 // Update language select options
@@ -186,15 +186,87 @@ const languageData = {
         locations: ['Penang', 'KL', 'Work-From-Home'],
         jobTypes: {
             'Penang': [
-                'CSS-EN-PE', 'AML-EN-PE', 'CM-EN-PE', 'TSS-EN-PE', 'ISR-EN-PE'
-
+                'CSS-Arabic-Penang',
+                'ContMod-Arabic-Penang',
+                'TechSupSpec-Arabic-Penang',
+                'CSS-Burmese-Penang',
+                'ContMod-Burmese-Penang',
+                'TechSupSpec-Burmese-Penang',
+                'CSS-Cantonese-Penang',
+                'ContMod-Cantonese-Penang',
+                'TechSupSpec-Cantonese-Penang',
+                'Interpreter-Cantonese-WFH',
+                'ServiceAdvisor-Cantonese-Penang',
+                'CSS-Khmer-Penang',
+                'ContMod-Khmer-Penang',
+                'TechSupSpec-Khmer-Penang',
+                'CSS-Lao-Penang',
+                'ContMod-Lao-Penang',
+                'TechSupSpec-Lao-Penang',
+                'CSS-Portuguese-Penang',
+                'ContMod-Portuguese-Penang',
+                'TechSupSpec-Portuguese-Penang',
+                'CSS-Russian-Penang',
+                'ContMod-Russian-Penang',
+                'TechSupSpec-Russian-Penang',
+                'CSS-Tagalog-KL',
+                'ContMod-Tagalog-KL',
+                'CSS-Taiwanese-Penang',
+                'ContMod-Taiwanese-Penang',
+                'TechSupSpec-Taiwanese-Penang',
+                'CSS-Tamil-Penang',
+                'ContMod-Tamil-Penang',
+                'TechSupSpec-Tamil-Penang',
+                'CSS-Vietnamese-KL',
+                'ContMod-Vietnamese-Penang',
+                'TechSupSpec-Vietnamese-Penang',
             ],
             'KL': [
-               ' CSS-EN-KL', 'AML-EN-KL', 'CM-EN-KL', 'TSS-EN-KL', 'ISR-EN-KL'
+                'AML-Arabic-KL',
+                'TechSupSpec-Arabic-KL',
+                'TechSupSpec-Arabic-KL',
+                'InboundSalesRep-Arabic-KL',
+                'TechSupSpec-Burmese-KL',
+                'InboundSalesRep-Burmese-KL',
+                'AML-Cantonese-KL',
+                'TechSupSpec-Cantonese-KL',
+                'InboundSalesRep-Cantonese-KL',
+                'TechSupSpec-Khmer-KL',
+                'InboundSalesRep-Khmer-KL',
+                'AML-Lao-KL',
+                'TechSupSpec-Lao-KL',
+                'InboundSalesRep-Lao-KL',
+                'AML-Portuguese-KL',
+                'TechSupSpec-Portuguese-KL',
+                'InboundSalesRep-Portuguese-KL',
+                'AML-Russian-KL',
+                'TechSupSpec-Russian-KL',
+                'InboundSalesRep-Russian-KL',
+                'AML-Tagalog-Penang',
+                'TechSupSpec-Tagalog-KL',
+                'InboundSalesRep-Tagalog-Penang',
+                'AML-Taiwanese-KL',
+                'TechSupSpec-Taiwanese-KL',
+                'InboundSalesRep-Taiwanese-KL',
+                'AML-Tamil-KL',
+                'TechSupSpec-Tamil-KL',
+                'InboundSalesRep-Tamil-KL',
+                'AML-Vietnamese-KL',
+                'TechSupSpec-Vietnamese-KL',
             ],
-            'Work-From-Home': ['IN-EN-WFH',
+            'Work-From-Home': [
+                'Interpreter-Arabic-WFH',
+                'Interpreter-Cantonese-WFH',
+                'Interpreter-Khmer-WFH',
+                'Interpreter-Lao-WFH',
+                'Interpreter-Portuguese-WFH',
+                'Interpreter-Russian-WFH',
+                'Interpreter-Tagalog-WFH',
+                'Interpreter-Tamil-WFH',
+                'Interpreter-Vietnamese-WFH',
             ]
         }
+        
     },
     
   
@@ -220,167 +292,167 @@ const languageData = {
 
  
 const jobOffersReferralLinks = {
-    'CSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=view',
-    'CSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=view',
-    'AML-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49452/anti-money-laundering-%28aml%29---korean---penang/job?mode=view',
-    'AML-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49470/anti-money-laundering-%28aml%29---korean---kl/job?mode=view',
-    'CM-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49891/content-moderator---korean---penang/job?mode=view',
-    'CM-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49894/content-moderator---korean---kl/job?mode=view',
-    'TSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49502/technical-support-specialist---korean---penang/job?mode=view',
-    'TSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49503/technical-support-specialist---korean---kl/job?mode=view',
-    'ISR-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49494/inbound-sales-representative---korean---penang/job?mode=view',
-    'ISR-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49496/inbound-sales-representative---korean---kl/job?mode=view',
-    'IN-KR-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49546/interpreter---korean---work-from-home/job?mode=view',
+    'CSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=job&iis=RAF&iisn=',
+    'AML-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49452/anti-money-laundering-%28aml%29---korean---penang/job?mode=job&iis=RAF&iisn=',
+    'AML-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49470/anti-money-laundering-%28aml%29---korean---kl/job?mode=job&iis=RAF&iisn=',
+    'CM-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49891/content-moderator---korean---penang/job?mode=job&iis=RAF&iisn=',
+    'CM-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49894/content-moderator---korean---kl/job?mode=job&iis=RAF&iisn=',
+    'TSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49502/technical-support-specialist---korean---penang/job?mode=job&iis=RAF&iisn=',
+    'TSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49503/technical-support-specialist---korean---kl/job?mode=job&iis=RAF&iisn=',
+    'ISR-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49494/inbound-sales-representative---korean---penang/job?mode=job&iis=RAF&iisn=',
+    'ISR-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49496/inbound-sales-representative---korean---kl/job?mode=job&iis=RAF&iisn=',
+    'IN-KR-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49546/interpreter---korean---work-from-home/job?mode=job&iis=RAF&iisn=',
     
-    'CSS-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49432/customer-success-specialist---japanese---penang/job?mode=view',
-    'CSS-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---japanese---kl/job?mode=view',
-    'AML-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49451/anti-money-laundering-%28aml%29---japanese---penang/job?mode=view',
-    'AML-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49461/anti-money-laundering-%28aml%29---japanese---kl/job?mode=view',
-    'CM-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49890/content-moderator---japanese---penang/job?mode=view',
-    'CM-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49892/content-moderator---japanese---kl/job?mode=view',
-    'TSS-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49501/technical-support-specialist---japanese---penang/job?mode=view',
-    'TSS-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49503/technical-support-specialist---japanese---kl/job?mode=view',
-    'ISR-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49493/inbound-sales-representative---japanese---penang/job?mode=view',
-    'ISR-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49628/inbound-sales-representative---japanese---kl/job?mode=view',
-    'IN-JP-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49545/interpreter---japanese---work-from-home/job?mode=view',
-     'SA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42690/service-advisor---malay---penang/job?mode=view',
-    'ASA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42693/assisted-sales-advisor---malay---penang/job?mode=view',
+    'CSS-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49432/customer-success-specialist---japanese---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---japanese---kl/job?mode=job&iis=RAF&iisn=',
+    'AML-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49451/anti-money-laundering-%28aml%29---japanese---penang/job?mode=job&iis=RAF&iisn=',
+    'AML-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49461/anti-money-laundering-%28aml%29---japanese---kl/job?mode=job&iis=RAF&iisn=',
+    'CM-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49890/content-moderator---japanese---penang/job?mode=job&iis=RAF&iisn=',
+    'CM-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49892/content-moderator---japanese---kl/job?mode=job&iis=RAF&iisn=',
+    'TSS-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49501/technical-support-specialist---japanese---penang/job?mode=job&iis=RAF&iisn=',
+    'TSS-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49503/technical-support-specialist---japanese---kl/job?mode=job&iis=RAF&iisn=',
+    'ISR-JP-PE': 'https://careerseng-teleperformance.icims.com/jobs/49493/inbound-sales-representative---japanese---penang/job?mode=job&iis=RAF&iisn=',
+    'ISR-JP-KL': 'https://careerseng-teleperformance.icims.com/jobs/49628/inbound-sales-representative---japanese---kl/job?mode=job&iis=RAF&iisn=',
+    'IN-JP-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49545/interpreter---japanese---work-from-home/job?mode=job&iis=RAF&iisn=',
+     'SA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42690/service-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
+    'ASA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42693/assisted-sales-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
  
-    'CSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49424/customer-success-specialist---english---kl/job?mode=view',
-    'CSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---english---penang/job?mode=view',
-    'AML-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29---english---kl/job?mode=view',
-    'AML-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49256/anti-money-laundering-%28aml%29---english---penang/job?mode=view',
-    'CM-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=view',
-    'CM-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49399/content-moderator---english---penang/job?mode=view',
-    'TSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49403/technical-support-specialist---english---kl/job?mode=view',
-    'TSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49402/technical-support-specialist---english---penang/job?mode=view',
-    'ISR-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49406/inbound-sales-representative---english---kl/job?mode=view',
-    'ISR-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49404/inbound-sales-representative---english---penang/job?mode=view',
-    'IN-EN-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49407/interpreter---english---work-from-home/job?mode=view',
-    'CSS-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin---kl/job?mode=view',
-    'CSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49435/customer-success-specialist---mandarin---penang/job?mode=view',
-    'AML-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49479/anti-money-laundering-%28aml%29---mandarin---kl/job?mode=view',
-    'AML-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49477/anti-money-laundering-%28aml%29---mandarin---penang/job?mode=view',
-    'CM-MN-KL': 'https://career5.ngteleperformance.icims.com/jobs/49580/content-moderator---mandarin---kl/job?mode=view',
+    'CSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49424/customer-success-specialist---english---kl/job?mode=job&iis=RAF&iisn=',
+    'CSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---english---penang/job?mode=job&iis=RAF&iisn=',
+    'AML-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29---english---kl/job?mode=job&iis=RAF&iisn=',
+    'AML-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49256/anti-money-laundering-%28aml%29---english---penang/job?mode=job&iis=RAF&iisn=',
+    'CM-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=RAF&iisn=',
+    'CM-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49399/content-moderator---english---penang/job?mode=job&iis=RAF&iisn=',
+    'TSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49403/technical-support-specialist---english---kl/job?mode=job&iis=RAF&iisn=',
+    'TSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49402/technical-support-specialist---english---penang/job?mode=job&iis=RAF&iisn=',
+    'ISR-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49406/inbound-sales-representative---english---kl/job?mode=job&iis=RAF&iisn=',
+    'ISR-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49404/inbound-sales-representative---english---penang/job?mode=job&iis=RAF&iisn=',
+    'IN-EN-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49407/interpreter---english---work-from-home/job?mode=job&iis=RAF&iisn=',
+    'CSS-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin---kl/job?mode=job&iis=RAF&iisn=',
+    'CSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49435/customer-success-specialist---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'AML-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49479/anti-money-laundering-%28aml%29---mandarin---kl/job?mode=job&iis=RAF&iisn=',
+    'AML-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49477/anti-money-laundering-%28aml%29---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'CM-MN-KL': 'https://career5.ngteleperformance.icims.com/jobs/49580/content-moderator---mandarin---kl/job?mode=job&iis=RAF&iisn=',
 
 
-    'CM-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49554/content-moderator---mandarin---penang/job?mode=view',
-    'TSS-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49573/technical-support-specialist---mandarin---kl/job?mode=view',
-    'TSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49501/technical-support-specialist---mandarin---penang/job?mode=view',
-    'ISR-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49500/inbound-sales-representative---mandarin---kl/job?mode=view',
-    'ISR-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49494/inbound-sales-representative---mandarin---penang/job?mode=view',
-    'IN-MN-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49546/interpreter---mandarin---work-from-home/job?mode=view',
+    'CM-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49554/content-moderator---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'TSS-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49573/technical-support-specialist---mandarin---kl/job?mode=job&iis=RAF&iisn=',
+    'TSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49501/technical-support-specialist---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'ISR-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49500/inbound-sales-representative---mandarin---kl/job?mode=job&iis=RAF&iisn=',
+    'ISR-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49494/inbound-sales-representative---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'IN-MN-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49546/interpreter---mandarin---work-from-home/job?mode=job&iis=RAF&iisn=',
  
  
  
-    'CSS-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49432/customer-success-specialist---thai---penang/job?mode=view',
-    'CSS-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---thai---kl/job?mode=view',
-    'AML-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49453/anti-money-laundering-%28aml%29---thai---penang/job?mode=view',
-    'AML-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49461/anti-money-laundering-%28aml%29---thai---kl/job?mode=view',
-    'CM-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49892/content-moderator---thai---penang/job?mode=view',
-    'CM-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49894/content-moderator---thai---kl/job?mode=view',
-    'TSS-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49502/technical-support-specialist---thai---penang/job?mode=view',
-    'TSS-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49504/technical-support-specialist---thai---kl/job?mode=view',
-    'ISR-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49503/inbound-sales-representative---thai---penang/job?mode=view',
-    'ISR-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49630/inbound-sales-representative---thai---kl/job?mode=view',
-    'IN-TH-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49547/interpreter---thai---work-from-home/job?mode=view',
+    'CSS-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49432/customer-success-specialist---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49429/customer-success-specialist---thai---kl/job?mode=job&iis=RAF&iisn=',
+    'AML-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49453/anti-money-laundering-%28aml%29---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'AML-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49461/anti-money-laundering-%28aml%29---thai---kl/job?mode=job&iis=RAF&iisn=',
+    'CM-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49892/content-moderator---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'CM-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49894/content-moderator---thai---kl/job?mode=job&iis=RAF&iisn=',
+    'TSS-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49502/technical-support-specialist---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'TSS-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49504/technical-support-specialist---thai---kl/job?mode=job&iis=RAF&iisn=',
+    'ISR-TH-PE': 'https://careerseng-teleperformance.icims.com/jobs/49503/inbound-sales-representative---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'ISR-TH-KL': 'https://careerseng-teleperformance.icims.com/jobs/49630/inbound-sales-representative---thai---kl/job?mode=job&iis=RAF&iisn=',
+    'IN-TH-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49547/interpreter---thai---work-from-home/job?mode=job&iis=RAF&iisn=',
  
 
-    'CSS-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49434/customer-success-specialist---arabic---penang/?mode=view',
-    'AML-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49474/anti-money-laundering-(aml)---arabic---kl/?mode=view',
-    'ContMod-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49677/content-moderator---arabic---penang/?mode=view',
-    'TechSupSpec-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49562/technical-support-specialist---arabic---penang/?mode=view',
-    'TechSupSpec-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49782/technical-support-specialist---arabic---kl/?mode=view',
-    'InboundSalesRep-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49693/inbound-sales-representative---arabic---kl/?mode=view',
-    'Interpreter-Arabic-WFH': 'https://careerseng.teleperformance.iims.com/job/49659/interpreter---arabic---work-from-home/?mode=view',
+    'CSS-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49434/customer-success-specialist---arabic---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49474/anti-money-laundering-(aml)---arabic---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49677/content-moderator---arabic---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Arabic-Penang': 'https://careerseng.teleperformance.iims.com/job/49562/technical-support-specialist---arabic---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49782/technical-support-specialist---arabic---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Arabic-KL': 'https://careerseng.teleperformance.iims.com/job/49693/inbound-sales-representative---arabic---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Arabic-WFH': 'https://careerseng.teleperformance.iims.com/job/49659/interpreter---arabic---work-from-home/?mode=job&iis=RAF&iisn=',
 
-    'CSS-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49500/customer-success-specialist---burmese---penang/?mode=view',
-    'AML-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49487/anti-money-laundering-(aml)---burmese---kl/?mode=view',
-    'ContMod-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49705/content-moderator---burmese---penang/?mode=view',
-    'TechSupSpec-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49568/technical-support-specialist---burmese---penang/?mode=view',
-    'TechSupSpec-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49588/technical-support-specialist---burmese---kl/?mode=view',
-    'InboundSalesRep-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49643/inbound-sales-representative---burmese---kl/?mode=view',
+    'CSS-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49500/customer-success-specialist---burmese---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49487/anti-money-laundering-(aml)---burmese---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49705/content-moderator---burmese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Burmese-Penang': 'https://careerseng.teleperformance.iims.com/job/49568/technical-support-specialist---burmese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49588/technical-support-specialist---burmese---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Burmese-KL': 'https://careerseng.teleperformance.iims.com/job/49643/inbound-sales-representative---burmese---kl/?mode=job&iis=RAF&iisn=',
 
-    'CSS-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49440/customer-success-specialist---cantonese---penang/?mode=view',
-    'AML-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49480/anti-money-laundering-(aml)---cantonese---kl/?mode=view',
-    'ContMod-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49560/content-moderator---cantonese---penang/?mode=view',
-    'TechSupSpec-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49555/technical-support-specialist---cantonese---penang/?mode=view',
-    'TechSupSpec-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---cantonese---kl/?mode=view',
-    'InboundSalesRep-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49636/inbound-sales-representative---cantonese---kl/?mode=view',
-    'Interpreter-Cantonese-WFH': 'https://careerseng.teleperformance.iims.com/job/49670/interpreter---cantonese---work-from-home/?mode=view',
-    'ServiceAdvisor-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49692/service-advisor---cantonese---penang/?mode=view',
-
-
-    'CSS-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49434/customer-success-specialist---khmer---penang/?mode=view',
-    'AML-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49485/anti-money-laundering-(aml)---khmer---kl/?mode=view',
-    'ContMod-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49505/content-moderator---khmer---penang/?mode=view',
-    'TechSupSpec-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---khmer---penang/?mode=view',
-    'TechSupSpec-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---khmer---kl/?mode=view',
-    'InboundSalesRep-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49641/inbound-sales-representative---khmer---kl/?mode=view',
-    'Interpreter-Khmer-WFH': 'https://careerseng.teleperformance.iims.com/job/49630/interpreter---khmer---work-from-home/?mode=view',
-    'ServiceAdvisor-Indonesian-Penang': 'https://careerseng.teleperformance.iims.com/job/49691/service-advisor---indonesian---penang/?mode=view',
+    'CSS-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49440/customer-success-specialist---cantonese---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49480/anti-money-laundering-(aml)---cantonese---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49560/content-moderator---cantonese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49555/technical-support-specialist---cantonese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---cantonese---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Cantonese-KL': 'https://careerseng.teleperformance.iims.com/job/49636/inbound-sales-representative---cantonese---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Cantonese-WFH': 'https://careerseng.teleperformance.iims.com/job/49670/interpreter---cantonese---work-from-home/?mode=job&iis=RAF&iisn=',
+    'ServiceAdvisor-Cantonese-Penang': 'https://careerseng.teleperformance.iims.com/job/49692/service-advisor---cantonese---penang/?mode=job&iis=RAF&iisn=',
 
 
-    'CSS-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49495/customer-success-specialist---lao---penang/?mode=view',
-    'AML-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49496/anti-money-laundering-(aml)---lao---kl/?mode=view',
-    'ContMod-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49504/content-moderator---lao---penang/?mode=view',
-    'TechSupSpec-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---lao---penang/?mode=view',
-    'TechSupSpec-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49587/technical-support-specialist---lao---kl/?mode=view',
-    'InboundSalesRep-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49622/inbound-sales-representative---lao---kl/?mode=view',
-    'Interpreter-Lao-WFH': 'https://careerseng.teleperformance.iims.com/job/49604/interpreter---lao---work-from-home/?mode=view',
+    'CSS-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49434/customer-success-specialist---khmer---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49485/anti-money-laundering-(aml)---khmer---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49505/content-moderator---khmer---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Khmer-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---khmer---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---khmer---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Khmer-KL': 'https://careerseng.teleperformance.iims.com/job/49641/inbound-sales-representative---khmer---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Khmer-WFH': 'https://careerseng.teleperformance.iims.com/job/49630/interpreter---khmer---work-from-home/?mode=job&iis=RAF&iisn=',
+    'ServiceAdvisor-Indonesian-Penang': 'https://careerseng.teleperformance.iims.com/job/49691/service-advisor---indonesian---penang/?mode=job&iis=RAF&iisn=',
 
 
-    'CSS-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49436/customer-success-specialist---portuguese---penang/?mode=view',
-    'AML-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49468/anti-money-laundering-(aml)---portuguese---kl/?mode=view',
-    'ContMod-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49504/content-moderator---portuguese---penang/?mode=view',
-    'TechSupSpec-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49559/technical-support-specialist---portuguese---penang/?mode=view',
-    'TechSupSpec-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49560/technical-support-specialist---portuguese---kl/?mode=view',
-    'InboundSalesRep-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49624/inbound-sales-representative---portuguese---penang/?mode=view',
-    'InboundSalesRep-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49644/inbound-sales-representative---portuguese---kl/?mode=view',
-    'Interpreter-Portuguese-WFH': 'https://careerseng.teleperformance.iims.com/job/49605/interpreter---portuguese---work-from-home/?mode=view',
+    'CSS-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49495/customer-success-specialist---lao---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49496/anti-money-laundering-(aml)---lao---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49504/content-moderator---lao---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Lao-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---lao---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49587/technical-support-specialist---lao---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Lao-KL': 'https://careerseng.teleperformance.iims.com/job/49622/inbound-sales-representative---lao---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Lao-WFH': 'https://careerseng.teleperformance.iims.com/job/49604/interpreter---lao---work-from-home/?mode=job&iis=RAF&iisn=',
 
 
-    'CSS-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49487/customer-success-specialist---russian---penang/?mode=view',
-    'AML-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49489/anti-money-laundering-(aml)---russian---kl/?mode=view',
-    'ContMod-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49480/content-moderator---russian---penang/?mode=view',
-    'TechSupSpec-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49570/technical-support-specialist---russian---penang/?mode=view',
-    'TechSupSpec-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49580/technical-support-specialist---russian---kl/?mode=view',
-    'InboundSalesRep-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49625/inbound-sales-representative---russian---kl/?mode=view',
-    'Interpreter-Russian-WFH': 'https://careerseng.teleperformance.iims.com/job/49606/interpreter---russian---work-from-home/?mode=view',
+    'CSS-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49436/customer-success-specialist---portuguese---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49468/anti-money-laundering-(aml)---portuguese---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49504/content-moderator---portuguese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49559/technical-support-specialist---portuguese---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49560/technical-support-specialist---portuguese---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Portuguese-Penang': 'https://careerseng.teleperformance.iims.com/job/49624/inbound-sales-representative---portuguese---penang/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Portuguese-KL': 'https://careerseng.teleperformance.iims.com/job/49644/inbound-sales-representative---portuguese---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Portuguese-WFH': 'https://careerseng.teleperformance.iims.com/job/49605/interpreter---portuguese---work-from-home/?mode=job&iis=RAF&iisn=',
 
 
-    'CSS-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49431/customer-success-specialist---tagalog---kl/?mode=view',
-    'AML-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49475/anti-money-laundering-(aml)---tagalog---penang/?mode=view',
-    'ContMod-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49676/content-moderator---tagalog---penang/?mode=view',
-    'TechSupSpec-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49577/technical-support-specialist---tagalog---kl/?mode=view',
-    'InboundSalesRep-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49672/inbound-sales-representative---tagalog---penang/?mode=view',
-    'Interpreter-Tagalog-WFH': 'https://careerseng.teleperformance.iims.com/job/49657/interpreter---tagalog---work-from-home/?mode=view',
-    'ContMod-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49515/content-moderator---tagalog---kl/?mode=view',
+    'CSS-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49487/customer-success-specialist---russian---penang/?mode=job&iis=RAF&iisn=',
+    'AML-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49489/anti-money-laundering-(aml)---russian---kl/?mode=job&iis=RAF&iisn=',
+    'ContMod-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49480/content-moderator---russian---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Russian-Penang': 'https://careerseng.teleperformance.iims.com/job/49570/technical-support-specialist---russian---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49580/technical-support-specialist---russian---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Russian-KL': 'https://careerseng.teleperformance.iims.com/job/49625/inbound-sales-representative---russian---kl/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Russian-WFH': 'https://careerseng.teleperformance.iims.com/job/49606/interpreter---russian---work-from-home/?mode=job&iis=RAF&iisn=',
+
+
+    'CSS-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49431/customer-success-specialist---tagalog---kl/?mode=job&iis=RAF&iisn=',
+    'AML-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49475/anti-money-laundering-(aml)---tagalog---penang/?mode=job&iis=RAF&iisn=',
+    'ContMod-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49676/content-moderator---tagalog---penang/?mode=job&iis=RAF&iisn=',
+    'TechSupSpec-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49577/technical-support-specialist---tagalog---kl/?mode=job&iis=RAF&iisn=',
+    'InboundSalesRep-Tagalog-Penang': 'https://careerseng.teleperformance.iims.com/job/49672/inbound-sales-representative---tagalog---penang/?mode=job&iis=RAF&iisn=',
+    'Interpreter-Tagalog-WFH': 'https://careerseng.teleperformance.iims.com/job/49657/interpreter---tagalog---work-from-home/?mode=job&iis=RAF&iisn=',
+    'ContMod-Tagalog-KL': 'https://careerseng.teleperformance.iims.com/job/49515/content-moderator---tagalog---kl/?mode=job&iis=RAF&iisn=',
 
  
-        'CSS-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49442/customer-success-specialist---taiwanese---penang/?mode=view',
-        'AML-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49481/anti-money-laundering-(aml)---taiwanese---kl/?mode=view',
-        'ContMod-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49491/content-moderator---taiwanese---penang/?mode=view',
-        'TechSupSpec-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---taiwanese---penang/?mode=view',
-        'TechSupSpec-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---taiwanese---kl/?mode=view',
-        'InboundSalesRep-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49637/inbound-sales-representative---taiwanese---kl/?mode=view',
-        'CSS-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49492/customer-success-specialist---tamil---penang/?mode=view',
-        'AML-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49483/anti-money-laundering-(aml)---tamil---kl/?mode=view',
-        'ContMod-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49480/content-moderator---tamil---penang/?mode=view',
-        'TechSupSpec-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49562/technical-support-specialist---tamil---penang/?mode=view',
-        'TechSupSpec-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49584/technical-support-specialist---tamil---kl/?mode=view',
-        'InboundSalesRep-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49639/inbound-sales-representative---tamil---kl/?mode=view',
+        'CSS-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49442/customer-success-specialist---taiwanese---penang/?mode=job&iis=RAF&iisn=',
+        'AML-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49481/anti-money-laundering-(aml)---taiwanese---kl/?mode=job&iis=RAF&iisn=',
+        'ContMod-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49491/content-moderator---taiwanese---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Taiwanese-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---taiwanese---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49561/technical-support-specialist---taiwanese---kl/?mode=job&iis=RAF&iisn=',
+        'InboundSalesRep-Taiwanese-KL': 'https://careerseng.teleperformance.iims.com/job/49637/inbound-sales-representative---taiwanese---kl/?mode=job&iis=RAF&iisn=',
+        'CSS-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49492/customer-success-specialist---tamil---penang/?mode=job&iis=RAF&iisn=',
+        'AML-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49483/anti-money-laundering-(aml)---tamil---kl/?mode=job&iis=RAF&iisn=',
+        'ContMod-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49480/content-moderator---tamil---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Tamil-Penang': 'https://careerseng.teleperformance.iims.com/job/49562/technical-support-specialist---tamil---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49584/technical-support-specialist---tamil---kl/?mode=job&iis=RAF&iisn=',
+        'InboundSalesRep-Tamil-KL': 'https://careerseng.teleperformance.iims.com/job/49639/inbound-sales-representative---tamil---kl/?mode=job&iis=RAF&iisn=',
      
      
-        'Interpreter-Tamil-WFH': 'https://careerseng.teleperformance.iims.com/job/49601/interpreter---tamil---work-from-home/?mode=view',
+        'Interpreter-Tamil-WFH': 'https://careerseng.teleperformance.iims.com/job/49601/interpreter---tamil---work-from-home/?mode=job&iis=RAF&iisn=',
 
-        'CSS-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49430/customer-success-specialist---vietnamese---kl/?mode=view',
-        'AML-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49474/anti-money-laundering-(aml)---vietnamese---kl/?mode=view',
-        'ContMod-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49437/content-moderator---vietnamese---penang/?mode=view',
-        'TechSupSpec-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---vietnamese---penang/?mode=view',
-        'TechSupSpec-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49576/technical-support-specialist---vietnamese---kl/?mode=view',
-        'InboundSalesRep-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49631/inbound-sales-representative---vietnamese---penang/?mode=view',
-        'Interpreter-Vietnamese-WFH': 'https://careerseng.teleperformance.iims.com/job/49548/interpreter---vietnamese---work-from-home/?mode=view'
+        'CSS-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49430/customer-success-specialist---vietnamese---kl/?mode=job&iis=RAF&iisn=',
+        'AML-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49474/anti-money-laundering-(aml)---vietnamese---kl/?mode=job&iis=RAF&iisn=',
+        'ContMod-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49437/content-moderator---vietnamese---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49556/technical-support-specialist---vietnamese---penang/?mode=job&iis=RAF&iisn=',
+        'TechSupSpec-Vietnamese-KL': 'https://careerseng.teleperformance.iims.com/job/49576/technical-support-specialist---vietnamese---kl/?mode=job&iis=RAF&iisn=',
+        'InboundSalesRep-Vietnamese-Penang': 'https://careerseng.teleperformance.iims.com/job/49631/inbound-sales-representative---vietnamese---penang/?mode=job&iis=RAF&iisn=',
+        'Interpreter-Vietnamese-WFH': 'https://careerseng.teleperformance.iims.com/job/49548/interpreter---vietnamese---work-from-home/?mode=job&iis=RAF&iisn='
 
     };
  
@@ -396,103 +468,79 @@ document.getElementById("emp-lang-select").addEventListener("change", function()
 const jobTitles = {
  
     'CSS-KR-PE': {
-        english: 'Customer Success Specialist - Korean - Penang',
-        korean: '고객 성공 전문가 - 한국어 - 페낭'
-    },
+        korean: 'Customer Success Specialist - Korean - Penang',
+     },
     'CSS-KR-KL': {
-        english: 'Customer Success Specialist - Korean - KL',
-        korean: '고객 성공 전문가 - 한국어 - KL'
-    },
+        korean: 'Customer Success Specialist - Korean - KL',
+     },
     'AML-KR-PE': {
-        english: 'Anti-Money-Laundering (AML) - Korean - Penang',
-        korean: '자금세탁방지 - 한국어 - 페낭'
-    },
+        korean: 'Anti-Money-Laundering (AML) - Korean - Penang',
+     },
     'AML-KR-KL': {
-        english: 'Anti-Money-Laundering (AML) - Korean - KL',
-        korean: '자금세탁방지 - 한국어 - KL'
-    },
+        korean: 'Anti-Money-Laundering (AML) - Korean - KL',
+     },
     'CM-KR-PE': {
-        english: 'Content Moderator - Korean - Penang',
-        korean: '콘텐츠 관리자 - 한국어 - 페낭'
-    },
+        korean: 'Content Moderator - Korean - Penang',
+     },
     'CM-KR-KL': {
-        english: 'Content Moderator - Korean - KL',
-        korean: '콘텐츠 관리자 - 한국어 - KL'
-    },
+        korean: 'Content Moderator - Korean - KL',
+     },
     'TSS-KR-PE': {
-        english: 'Technical Support Specialist - Korean - Penang',
-        korean: '기술 지원 전문가 - 한국어 - 페낭'
-    },
+        korean: 'Technical Support Specialist - Korean - Penang',
+     },
     'TSS-KR-KL': {
-        english: 'Technical Support Specialist - Korean - KL',
-        korean: '기술 지원 전문가 - 한국어 - KL'
-    },
+        korean: 'Technical Support Specialist - Korean - KL',
+     },
     'ISR-KR-PE': {
-        english: 'Inbound Sales Representative - Korean - Penang',
-        korean: '인바운드 판매 대표 - 한국어 - 페낭'
-    },
+        korean: 'Inbound Sales Representative - Korean - Penang',
+     },
     'ISR-KR-KL': {
-        english: 'Inbound Sales Representative - Korean - KL',
-        korean: '인바운드 판매 대표 - 한국어 - KL'
-    },
+        korean: 'Inbound Sales Representative - Korean - KL',
+     },
     'IN-KR-WFH': {
-        english: 'Interpreter - Korean - Work-From-Home',
-        korean: '통역사 - 한국어 - 재택근무'
-    },
+        korean: 'Interpreter - Korean - Work-From-Home',
+     },
     
     'CSS-JP-PE': {
-        english: 'Customer Success Specialist - Japanese - Penang',
-        japanese: 'カスタマーサクセススペシャリスト - 日本語 - ペナン'
-    },
+        japanese: 'Customer Success Specialist - Japanese - Penang',
+     },
     'CSS-JP-KL': {
-        english: 'Customer Success Specialist - Japanese - KL',
-        japanese: 'カスタマーサクセススペシャリスト - 日本語 - KL'
-    },
+         japanese: 'Customer Success Specialist - Japanese - KL',
+     },
     'AML-JP-PE': {
-        english: 'Anti-Money-Laundering (AML) - Japanese - Penang',
-        japanese: 'マネーロンダリング防止 - 日本語 - ペナン'
-    },
+         japanese: 'Anti-Money-Laundering (AML) - Japanese - Penang',
+     },
     'AML-JP-KL': {
-        english: 'Anti-Money-Laundering (AML) - Japanese - KL',
-        japanese: 'マネーロンダリング防止 - 日本語 - KL'
-    },
+         japanese: 'Anti-Money-Laundering (AML) - Japanese - KL',
+     },
     'CM-JP-PE': {
-        english: 'Content Moderator - Japanese - Penang',
-        japanese: 'コンテンツモデレーター - 日本語 - ペナン'
-    },
+         japanese: 'Content Moderator - Japanese - Penang',
+     },
     'CM-JP-KL': {
-        english: 'Content Moderator - Japanese - KL',
-        japanese: 'コンテンツモデレーター - 日本語 - KL'
-    },
+         japanese: 'Content Moderator - Japanese - KL',
+     },
     'TSS-JP-PE': {
-        english: 'Technical Support Specialist - Japanese - Penang',
-        japanese: 'テクニカルサポートスペシャリスト - 日本語 - ペナン'
-    },
+         japanese: 'Technical Support Specialist - Japanese - Penang',
+     },
     'TSS-JP-KL': {
-        english: 'Technical Support Specialist - Japanese - KL',
-        japanese: 'テクニカルサポートスペシャリスト - 日本語 - KL'
-    },
+         japanese: 'Technical Support Specialist - Japanese - KL',
+     },
     'ISR-JP-PE': {
-        english: 'Inbound Sales Representative - Japanese - Penang',
-        japanese: 'インバウンドセールス担当者 - 日本語 - ペナン'
-    },
+         japanese: 'Inbound Sales Representative - Japanese - Penang',
+     },
     'ISR-JP-KL': {
-        english: 'Inbound Sales Representative - Japanese - KL',
-        japanese: 'インバウンドセールス担当者 - 日本語 - KL'
-    },
+         japanese: 'Inbound Sales Representative - Japanese - KL',
+     },
     'IN-JP-WFH': {
-        english: 'Interpreter - Japanese - Work-From-Home',
-        japanese: '通訳者 - 日本語 - 在宅勤務'
-    },
+         japanese: 'Interpreter - Japanese - Work-From-Home',
+     },
     'ASA-MY-PE': {
-        english: 'Assisted Sales Advisor - Malay - Penang',
-        malay: 'Penasihat Jualan Dibantu - Melayu - Penang'
-    },
+        malay: 'Assisted Sales Advisor - Malay - Penang',
+     },
     'SA-MY-PE': { 
 
-    english: 'Service Advisor - Malay - Penang',
-    malay: '   - Melayu - Penang'
-    },
+      malay: 'Service Advisor - Malay - Penang',
+     },
   
     'CSS-EN-KL': {
         english: 'Customer Success Specialist - English - KL'
@@ -528,95 +576,73 @@ const jobTitles = {
         english: 'Interpreter - English - Work-From-Home'
     },
     'CSS-MN-KL': {
-        english: 'Customer Success Specialist - Mandarin - KL',
-        mandarin: '客户成功专家 - 普通话 - 吉隆坡'
-    },
+        mandarin: 'Customer Success Specialist - Mandarin - KL',
+     },
     'CSS-MN-PE': {
-        english: 'Customer Success Specialist - Mandarin - Penang',
-        mandarin: '客户成功专家 - 普通话 - 槟城'
-    },
+        mandarin: 'Customer Success Specialist - Mandarin - Penang',
+     },
     'AML-MN-KL': {
-        english: 'Anti-Money-Laundering (AML) - Mandarin - KL',
-        mandarin: '反洗钱 - 普通话 - 吉隆坡'
-    },
+        mandarin: 'Anti-Money-Laundering (AML) - Mandarin - KL',
+     },
     'AML-MN-PE': {
-        english: 'Anti-Money-Laundering (AML) - Mandarin - Penang',
-        mandarin: '反洗钱 - 普通话 - 槟城'
-    },
+        mandarin: 'Anti-Money-Laundering (AML) - Mandarin - Penang',
+     },
     'CM-MN-KL': {
-        english: 'Content Moderator - Mandarin - KL',
-        mandarin: '内容审查员 - 普通话 - 吉隆坡'
-    },
+        mandarin: 'Content Moderator - Mandarin - KL',
+     },
     'CM-MN-PE': {
-        english: 'Content Moderator - Mandarin - Penang',
-        mandarin: '内容审查员 - 普通话 - 槟城'
-    },
+        mandarin: 'Content Moderator - Mandarin - Penang',
+     },
     'TSS-MN-KL': {
-        english: 'Technical Support Specialist - Mandarin - KL',
-        mandarin: '技术支持专家 - 普通话 - 吉隆坡'
-    },
+        mandarin: 'Technical Support Specialist - Mandarin - KL',
+     },
     'TSS-MN-PE': {
-        english: 'Technical Support Specialist - Mandarin - Penang',
-        mandarin: '技术支持专家 - 普通话 - 槟城'
-    },
+        mandarin: 'Technical Support Specialist - Mandarin - Penang',
+     },
     'ISR-MN-KL': {
-        english: 'Inbound Sales Representative - Mandarin - KL',
-        mandarin: '销售代表 - 普通话 - 吉隆坡'
-    },
+        mandarin: 'Inbound Sales Representative - Mandarin - KL',
+     },
     'ISR-MN-PE': {
-        english: 'Inbound Sales Representative - Mandarin - Penang',
-        mandarin: '销售代表 - 普通话 - 槟城'
-    },
+        mandarin: 'Inbound Sales Representative - Mandarin - Penang',
+     },
     'IN-MN-WFH': {
-        english: 'Interpreter - Mandarin - Work-From-Home',
-        mandarin: '口译员 - 普通话 - 在家工作'
-    },
+        mandarin: 'Interpreter - Mandarin - Work-From-Home',
+     },
 
 
     'CSS-TH-PE': {
-        english: 'Customer Success Specialist - Thai - Penang',
-        thai: 'ผู้เชี่ยวชาญความสำเร็จของลูกค้า - ไทย - ปีนัง'
-    },
+        thai: 'Customer Success Specialist - Thai - Penang',
+     },
     'CSS-TH-KL': {
-        english: 'Customer Success Specialist - Thai - KL',
-        thai: 'ผู้เชี่ยวชาญความสำเร็จของลูกค้า - ไทย - กัวลาลัมเปอร์'
-    },
+        thai: 'Customer Success Specialist - Thai - KL',
+     },
     'AML-TH-PE': {
-        english: 'Anti-Money-Laundering (AML) - Thai - Penang',
-        thai: 'ต่อต้านการฟอกเงิน - ไทย - ปีนัง'
-    },
+        thai: 'Anti-Money-Laundering (AML) - Thai - Penang',
+     },
     'AML-TH-KL': {
-        english: 'Anti-Money-Laundering (AML) - Thai - KL',
-        thai: 'ต่อต้านการฟอกเงิน - ไทย - กัวลาลัมเปอร์'
-    },
+        thai: 'Anti-Money-Laundering (AML) - Thai - KL',
+     },
     'CM-TH-PE': {
-        english: 'Content Moderator - Thai - Penang',
-        thai: 'ผู้ดูแลเนื้อหา - ไทย - ปีนัง'
-    },
+        thai: 'Content Moderator - Thai - Penang',
+     },
     'CM-TH-KL': {
-        english: 'Content Moderator - Thai - KL',
-        thai: 'ผู้ดูแลเนื้อหา - ไทย - กัวลาลัมเปอร์'
-    },
+        thai: 'Content Moderator - Thai - KL',
+     },
     'TSS-TH-PE': {
-        english: 'Technical Support Specialist - Thai - Penang',
-        thai: 'ผู้เชี่ยวชาญการสนับสนุนทางเทคนิค - ไทย - ปีนัง'
-    },
+        thai: 'Technical Support Specialist - Thai - Penang',
+     },
     'TSS-TH-KL': {
-        english: 'Technical Support Specialist - Thai - KL',
-        thai: 'ผู้เชี่ยวชาญการสนับสนุนทางเทคนิค - ไทย - กัวลาลัมเปอร์'
-    },
+        thai: 'Technical Support Specialist - Thai - KL',
+     },
     'ISR-TH-PE': {
-        english: 'Inbound Sales Representative - Thai - Penang',
-        thai: 'ตัวแทนขายขาเข้า - ไทย - ปีนัง'
-    },
+        thai: 'Inbound Sales Representative - Thai - Penang',
+     },
     'ISR-TH-KL': {
-        english: 'Inbound Sales Representative - Thai - KL',
-        thai: 'ตัวแทนขายขาเข้า - ไทย - กัวลาลัมเปอร์'
-    },
+        thai: 'Inbound Sales Representative - Thai - KL',
+     },
     'IN-TH-WFH': {
-        english: 'Interpreter - Thai - Work-From-Home',
-        thai: 'ล่าม - ไทย - ทำงานจากที่บ้าน'
-    },
+        thai: 'Interpreter - Thai - Work-From-Home',
+     },
   
     'CSS-Arabic-Penang': {
         other: 'Customer Success Specialist - Arabic - Penang'
@@ -913,51 +939,55 @@ function renderJobTitle(jobCode) {
     return jobTitles[jobCode];
 
 }
-
-
-    function populateJobTypes() {
-        // This gets the language for determining available job types
-        var languageSelect = document.getElementById("language-select");
-        var jobLanguage = languageSelect.options[languageSelect.selectedIndex].value;
-        // This gets the language for translating dropdown texts
-        var empLangSelect = document.getElementById("emp-lang-select");
-        var displayLanguage = empLangSelect.options[empLangSelect.selectedIndex].value;
-    
-        var locationSelect = document.getElementById("location-select");
-        var selectedLocation = locationSelect.options[locationSelect.selectedIndex].value;
-        var jobTypeSelect = document.getElementById("job-type-select");
-        jobTypeSelect.innerHTML = '';  // Clear existing entries
-    
-        // Check if the job types exist for the selected language
-        if (languageData[jobLanguage] && languageData[jobLanguage].jobTypes[selectedLocation]) {
-            languageData[jobLanguage].jobTypes[selectedLocation].forEach(jobCode => {
-                var option = document.createElement("option");
-                // Using displayLanguage to translate the job title
-                option.text = jobTitles[jobCode][displayLanguage];
-                option.value = jobCode;
-                jobTypeSelect.appendChild(option);
-            });
-        }
-    }
 // Update locations dropdown based on selected language
 function populateLocations() {
-    var empLangSelect = document.getElementById("emp-lang-select");
+    var empLangSelect = document.getElementById("language-select");
     var selectedLanguage = empLangSelect.options[empLangSelect.selectedIndex].value;
     var locationSelect = document.getElementById("location-select");
     locationSelect.innerHTML = ''; // Clear previous options
 
-    if (languageData[selectedLanguage].locations) {
-        languageData[selectedLanguage].locations.forEach(location => {
-            let option = document.createElement("option");
-            option.text = location;
-            option.value = location;
-            locationSelect.appendChild(option);
-        });
+    if (languageData[selectedLanguage]) {
+        var availableLocations = languageData[selectedLanguage].locations;
+        if (availableLocations && availableLocations.length > 0) {
+            availableLocations.forEach(location => {
+                let option = document.createElement("option");
+                option.text = location;
+                option.value = location;
+                locationSelect.appendChild(option);
+            });
+        }
+    }
 
-        // Call populateJobTypes to refresh job types based on new locations
-        populateJobTypes();
+    // Call populateJobTypes to refresh job types based on new locations
+    populateJobTypes();
+}
+
+
+// This function populates job types dropdown based on selected location
+function populateJobTypes() {
+    var languageSelect = document.getElementById("language-select");
+    var jobLanguage = languageSelect.options[languageSelect.selectedIndex].value;
+    var empLangSelect = document.getElementById("emp-lang-select");
+    var displayLanguage = empLangSelect.options[empLangSelect.selectedIndex].value;
+
+    var locationSelect = document.getElementById("location-select");
+    var selectedLocation = locationSelect.options[locationSelect.selectedIndex].value;
+    var jobTypeSelect = document.getElementById("job-type-select");
+    jobTypeSelect.innerHTML = '';  // Clear existing entries
+
+    if (languageData[jobLanguage] && languageData[jobLanguage].jobTypes && languageData[jobLanguage].jobTypes[selectedLocation]) {
+        languageData[jobLanguage].jobTypes[selectedLocation].forEach(jobCode => {
+            var option = document.createElement("option");
+            // Get the job title directly from jobTitles without translation
+            option.text = jobTitles[jobCode][jobLanguage];
+            option.value = jobCode;
+            jobTypeSelect.appendChild(option);
+        });
     }
 }
+
+
+
 document.getElementById("location-select").addEventListener("change", function() {
     // Update job types when the location selection changes
     populateJobTypes();
@@ -1028,3 +1058,8 @@ populateLocations();
     
     // Initial population of location options based on the default language
     populateLocations();
+
+    
+    function refreshPage() {
+        location.reload();
+    }
