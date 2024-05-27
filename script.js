@@ -950,7 +950,13 @@ document.getElementById("emp-lang-select").addEventListener("change", function()
 var selectedJobType; // Declare selectedJobType globally
 var bmsId; // Declare bmsId globally 
 // Assume this is called on page load to populate the initial dropdowns
+
+var selectedJobType; // Declare selectedJobType globally
+var bmsId; // Declare bmsId globally 
+
 populateLocations();
+
+
     // Function to proceed to Step 2
     function nextStep() {
         var bmsId = document.getElementById("bms-id").value;
@@ -966,7 +972,7 @@ populateLocations();
         
         
         // Generate referral link
-var referralLink = jobOffersReferralLinks[selectedJobType] + bmsId;
+        var referralLink = jobOffersReferralLinks[selectedJobType] + bmsId;
 
 // Display link and generate QR code
 document.getElementById("generated-link").innerHTML = `<a href="${referralLink}" target="_blank">${referralLink}</a>`;
@@ -1000,22 +1006,21 @@ document.getElementById("share-button-Wechat").addEventListener("click", functio
      const lineLink = `https://wechat.me/R/msg/text/?${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
     window.open(lineLink, "_blank");
 });
-
+ 
 // Function to generate QR code for the link
 function generateQrCode(link) {
     const qrImg = document.getElementById('qrImg');
     const qrBox = document.getElementById('qrBox');
     // Add code to generate QR code here if needed
-}
 
-        // Construct the URL for the qrserver.com API
-        const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(link)}`;
-    
-        // Generating image
-        qrImg.src = apiUrl;
-        qrBox.setAttribute("id", "qrBoxGenerated");
+    // Construct the URL for the qrserver.com API
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(link)}`;
+
+    // Generating image
+    qrImg.src = apiUrl;
+    qrBox.setAttribute("id", "qrBoxGenerated");
+}
     }
-    
     // Call populateLocations when language selection changes
     document.getElementById("language-select").addEventListener("change", populateLocations);
     
