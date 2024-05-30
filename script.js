@@ -180,7 +180,12 @@ function updatePageContent(language) {
 
 const languageData = {
 
- 
+    Tagalog:{
+        locations: ['Penang'],
+        jobTypes: {
+            'Penang': ['CSS-TG-PE'],
+        }
+    },
 
 
   
@@ -234,6 +239,8 @@ mandarin: {
 };
  
 const jobOffersReferralLinks = {
+'CSS-TG-PE': 'https://careerseng-teleperformance.icims.com/jobs/49426/customer-success-specialist---tagalog---penang/job?mode=job&iis=RAF&iisn=',
+
     'CSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=job&iis=RAF&iisn=',
     'CSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=job&iis=RAF&iisn=',
     'AML-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49452/anti-money-laundering-%28aml%29---korean---penang/job?mode=job&iis=RAF&iisn=',
@@ -261,7 +268,7 @@ const jobOffersReferralLinks = {
     'ASA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42693/assisted-sales-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
  
     'CSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49424/customer-success-specialist---english---kl/job?mode=job&iis=RAF&iisn=',
-    'CSS-EN-PE': '						https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49253/customer-success-specialist---english---penang/job?mode=job&iis=RAF&iisn=',
     'AML-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29---english---kl/job?mode=job&iis=RAF&iisn=',
     'AML-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49256/anti-money-laundering-%28aml%29---english---penang/job?mode=job&iis=RAF&iisn=',
     'CM-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=RAF&iisn=',
@@ -407,7 +414,11 @@ document.getElementById("emp-lang-select").addEventListener("change", function()
 // Simulated job titles object
 
 const jobTitles = { 
- 
+
+ 'CSS-TG-PE': {Tagalog:'Customer Success Specialist - Tagalog - Penang'
+
+ },
+
     'CSS-KR-PE': {
         korean: 'Customer Success Specialist - Korean - Penang',
      },
@@ -985,25 +996,25 @@ document.getElementById("step2").style.display = "block";
 // Share button for WhatsApp
 document.getElementById("share-button-whatsapp").addEventListener("click", function() {
     const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
-const message2 ="Let's grow together! 🚀 #JoinTheTeam";
-    const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+const message2 = "\n\n   Let's grow together! 🚀 #JoinTheTeam";
+    const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message + "\n\n"+  referralLink + "\n\n" +message2)}`;
     window.open(whatsappLink, "_blank");
 });
 
 // Share button for Line
 document.getElementById("share-button-line").addEventListener("click", function() {
     const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
-    const message2 ="Let's grow together! 🚀 #JoinTheTeam";
+    const message2 ="\n\nLet's grow together! 🚀 #JoinTheTeam";
     
-    const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+    const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message +  "\n\n"+  referralLink + "\n\n"+message2)}`;
     window.open(lineLink, "_blank");
 });
 
 // Share button for Wechat
 document.getElementById("share-button-Wechat").addEventListener("click", function() {
     const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
-    const message2 ="Let's grow together! 🚀 #JoinTheTeam";
-     const lineLink = `https://wechat.me/R/msg/text/?${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+    const message2 ="\n\nLet's grow together! 🚀 #JoinTheTeam";
+     const lineLink = `https://wechat.me/R/msg/text/?${encodeURIComponent(message +  "\n\n"+  referralLink + "\n\n"+message2)}`;
     window.open(lineLink, "_blank");
 });
  
