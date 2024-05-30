@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const jobData = jsonData.find(item => item.Language === selectedLanguage && item.Location === selectedLocation && item.Positions === selectedJob);
 
         if (jobData) {
-            const finalLink = jobData["Evergreen link"] + 'job?mode=job&iis=RAF&iisn=' + bmsId;
+            const finalLink = jobData["Evergreen link"] +  bmsId;
             generatedLink.innerHTML = `<a href="${finalLink}" target="_blank">${finalLink}</a>`;
             generateQrCode(finalLink);
         }
